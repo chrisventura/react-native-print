@@ -155,15 +155,15 @@ RCT_EXPORT_METHOD(selectPrinter:(NSDictionary *)options
     }
 }
 
-#pragma mark - UIPrintInteractionControllerDelegate
+// #pragma mark - UIPrintInteractionControllerDelegate
 
--(UIViewController*)printInteractionControllerParentViewController:(UIPrintInteractionController*)printInteractionController  {
-    UIViewController *result = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-    while (result.presentedViewController) {
-        result = result.presentedViewController;
-    }
-    return result;
-}
+// -(UIViewController*)printInteractionControllerParentViewController:(UIPrintInteractionController*)printInteractionController  {
+//     UIViewController *result = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+//     while (result.presentedViewController) {
+//         result = result.presentedViewController;
+//     }
+//     return result;
+// }
 
 -(void)printInteractionControllerWillDismissPrinterOptions:(UIPrintInteractionController*)printInteractionController {}
 
